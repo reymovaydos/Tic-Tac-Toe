@@ -1,0 +1,33 @@
+@mixin DisplayFlex(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin ColorBlack(){
+    color: #000;
+}
+.Board {
+    .wrapper {
+        @include DisplayFlex;
+    }
+
+    .btn-reset {
+        display: flex;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 20%;
+        border-radius: 100px;
+        border: 1px solid #000;
+        &:hover{
+            transition: background-color 2s ease;
+            background-color: blue;
+      }
+        a {
+            font-family: "Arial";
+            @include ColorBlack;
+            &:hover{
+                color: #fff;
+            }
+        }
+    }
+}
